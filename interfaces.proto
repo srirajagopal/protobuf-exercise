@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+message Interface {
+  string name = 1;
+  string description = 2;
+  bool admin_up = 3;
+  bool oper_up = 4;
+  uint32 mtu = 5;
+  string mac_address = 6;
+  string ipv4_address = 7;
+  uint64 speed_mbps = 8;
+  uint64 in_octets = 9;
+  uint64 out_octets = 10;
+  uint64 in_errors = 11;
+  uint64 out_errors = 12;
+}
+
+message InterfaceCollection {
+  repeated Interface interfaces = 1;
+}
